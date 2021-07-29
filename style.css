@@ -1,0 +1,19 @@
+.cell {
+    border: 1px solid black;
+    margin: 0;
+}
+
+.grid-container {
+    border: 3px solid black;
+    height: 700px;
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(30, auto);
+    
+}
+
+.grid-container:hover {
+    cursor: url("https://img.icons8.com/color/45/000000/cosmetic-brush.png") 8 30, default;
+}
+
+/*https://img.icons8.com/doodle/36/000000/paint-brush--v1.png*/ 
