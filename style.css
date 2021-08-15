@@ -1,19 +1,148 @@
-.cell {
-    border: 1px solid black;
+body {
+    background-color: rgb(237, 237, 237);
+    color: rgb(51, 51, 51);
+    text-align: center;
+    font-family: monospace;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+
+/*           CONTROLS           */
+
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 60px; 
+    width: 200px;   
+    gap: 30px;
+}
+
+#colour-selection{
     margin: 0;
+    height: 100px;
+    width: 100px;
+    padding: 0;
+    border: none;
+}
+
+#colour-selection::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+button {
+    height: 50px;
+    margin: 0;
+    border: 2px solid rgb(51, 51, 51);
+    border-radius: 4px;
+    width: 100%;
+    font-family: monospace;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.25s;
+}
+
+button:hover {
+    transform: scale(1.1)
+}
+
+button:active {
+    transition: transform 0.2s;
+    transform: scale(1);
+}
+
+.active-button {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.grid-size-selector {     
+    width: 100%;
+}
+
+h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+}
+
+#slider {
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+#slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    margin-top: -8px;
+    background: #333333;
+}
+
+#slider::-webkit-slider-thumb:hover {
+    cursor: grab;
+}
+
+#slider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+} 
+
+#slider::-webkit-slider-runnable-track {
+    height: 10px;
+    border: 1px solid #333333;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+}
+
+#grid-size {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 0 0;
+}
+
+
+/*           NAME AND GRID           */
+
+.name-and-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 250px;
+}
+
+h1 {
+    font-family: fantasy;
+    font-size: 75px;
+    color: rgb(51,51,51);
+    margin: 0;
+    cursor: default;
 }
 
 .grid-container {
-    border: 3px solid black;
-    height: 700px;
-    width: 700px;
     display: grid;
-    grid-template-columns: repeat(30, auto);
-    
+    border: 3px solid rgb(51, 51, 51);
+    margin: 0;
+    padding: 0;
+    background-color: rgb(254, 254, 254);
+    height: 500px;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    grid-template-columns: repeat(30, 1fr);
 }
 
 .grid-container:hover {
-    cursor: url("https://img.icons8.com/color/45/000000/cosmetic-brush.png") 8 30, default;
+    cursor: url("https://img.icons8.com/color/45/000000/cosmetic-brush.png") 8 32, default;
 }
-
-/*https://img.icons8.com/doodle/36/000000/paint-brush--v1.png*/ 

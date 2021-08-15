@@ -7,15 +7,28 @@
     <link rel="stylesheet" href="style.css">
     <title>Etch-a-Sketch</title>
 </head>
-<body>
-    <h1>Etch-a-Sketch</h1>
-    <input type="color">
-    <div class="grid-size-selector">
-        <h3>Select Grid Size</h3>
-        <input type="range" min="1" max="60" value="30" id="slider">
-        <p>Grid size: <span id="grid-size"></span></p>
-    </div>
-    <div class="grid-container"></div>
+<body>  
+    <main>        
+        <div class="controls">
+            <input type="color" id="colour-selection" value="#333333">
+
+            <button  id="colour-mode"  onclick="activateButton()" class="active-button">Colour Mode</button>
+            <button id="rainbow" onclick="activateButton()">Rainbow Mode</button>
+            <button id="clear" onclick="clearCells()">Clear</button>
+
+            <div class="grid-size-selector">
+                <h3>Select Grid Size</h3>
+                <input type="range" min="1" max="60" value="30" id="slider">
+                <p id="grid-size"> 30 X 30</p>
+            </div>
+        </div>
+
+        <div class="name-and-grid">
+            <h1>Etch-a-Sketch</h1>   
+            <div class="grid-container"></div>
+        </div>
+    </main>
+
     <script src="main.js"></script>
 </body>
 </html>
