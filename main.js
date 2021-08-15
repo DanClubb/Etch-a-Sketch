@@ -8,11 +8,9 @@ let colourSelection = document.getElementById('colour-selection');
 let colourButton = document.getElementById('colour-mode');
 let rainbowButton = document.getElementById('rainbow');
 
-let test = 500 / 30;
-
 function createGrid(){
     container.innerHTML = '';
-    container.style.setProperty('grid-template-columns', `repeat(${value}, ${test}px)`);
+    container.style.setProperty('grid-template-columns', `repeat(${value}, 1fr)`);
 
     for (let i = 0; i < (value * value); i++){
         let cell = document.createElement('div');
